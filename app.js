@@ -19,3 +19,8 @@ function changeBackground(){
     background.style.backgroundImage = `url(${vibes[clickcount]})`
 };     
 changeBackgroundBtn.addEventListener('click', changeBackground)
+
+const paintBrush = createBrush ();
+const canvas = document.querySelector('.canvas');
+canvas.appendChild(paintBrush);
+
