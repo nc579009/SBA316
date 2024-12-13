@@ -21,12 +21,21 @@
     height: 48%;
 }
 .supplySpace{
-
+    border: solid green;
+    height: 20%;
+}
+.canvas{
+    border: solid orange;
+    height: 80%;
 }
 .printSpace {
     border: solid blue;
     width: 48%;
     height: 48%;
+}
+.textFormContainer{
+    border: solid green;
+    height: 20%;
 }
 .switchArea{
     border: solid blue;
