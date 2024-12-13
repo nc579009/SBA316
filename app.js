@@ -17,6 +17,5 @@ function changeBackground(){
         clickcount = 0;
     }
     background.style.backgroundImage = `url(${vibes[clickcount]})`
-}
-        
+};     
 changeBackgroundBtn.addEventListener('click', changeBackground)
