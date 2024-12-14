@@ -20,6 +20,8 @@ function changeBackground(){
 };     
 changeBackgroundBtn.addEventListener('click', changeBackground)
 
+
+// paint capabilities
 const paintBrush = createBrush ();
 const canvas = document.querySelector('.canvas');
 canvas.appendChild(paintBrush);
@@ -30,18 +32,28 @@ function createBrush () {
     return brush;
 }
 
-function placeBrush(brush,x,y) {
+function placeBrush(brush) {
     const copy = brush.cloneNode(true);
+    copy.style.position = 'absolute'
     canvas.appendChild(copy)
 }
-
-function handleClick() {
+function handleClick(event) {
     placeCircle(mouseCircle);
 }
 let paintInterval;
-function handleStart() {
-  paintInterval = setInterval(() => placeCircle(paintBrush), 10)
+function handleStart(event) {
+    paintInterval = setInterval(() => placeBrush(paintBrush), 10)
 
+}
+function handleStop(){
+    clearInterval(paintInterval)
+}
+canvas.addEventListener('click', handleClick);
+canvas.addEventListener('mousedown', handleStart);
+canvas.addEventListener('mouseup', handleStop);
+
+
+// Append text area
 document.querySelector('.formType').addEventListener('submit',function(event) {
     event.preventDefault();
     const textInput = document.getElementById('text').value;
