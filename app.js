@@ -20,31 +20,35 @@ function changeBackground(){
 };     
 changeBackgroundBtn.addEventListener('click', changeBackground)
 
-// const paintBrush = createBrush ();
-// const canvas = document.querySelector('.canvas');
-// canvas.appendChild(paintBrush);
+const paintBrush = createBrush ();
+const canvas = document.querySelector('.canvas');
+canvas.appendChild(paintBrush);
 
-// function createBrush () {
-//     const brush = document.createElement('div');
-//     brush.classList.add('brush');
-//     return brush;
-// }
+function createBrush () {
+    const brush = document.createElement('div');
+    brush.classList.add('brush');
+    return brush;
+}
 
-// function placeBrush(brush) {
-//     const copy = brush.cloneNode(true);
-// };
-// function handleClick() {
-//     placeCircle(mouseCircle);
-// }
-// let paintInterval;
-// function handleStart() {
-//   paintInterval = setInterval(() => placeCircle(paintBrush), 10)
+function placeBrush(brush,x,y) {
+    const copy = brush.cloneNode(true);
+    canvas.appendChild(copy)
+}
 
-document.getElementsByClassName('formType').addEventListener('submit',function(event) {
+function handleClick() {
+    placeCircle(mouseCircle);
+}
+let paintInterval;
+function handleStart() {
+  paintInterval = setInterval(() => placeCircle(paintBrush), 10)
+
+document.querySelector('.formType').addEventListener('submit',function(event) {
     event.preventDefault();
     const textInput = document.getElementById('text').value;
-    const outputbox = document.getElementsByClassName('textContainer');
-    const newText = document.createElement('p')
-    newText.textContent = textInput;
-    outputbox.appendChild(newText)
+    const outputbox = document.querySelector('.textContainer');
+    if (textInput.trim() !== ''){
+        const newText = document.createElement('p')
+        newText.textContent = textInput;
+        outputbox.appendChild(newText)
+    }
 })
