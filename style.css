@@ -52,3 +52,10 @@
     width: 48%;
     height: 48%;
 }
+.brush {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+}

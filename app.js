@@ -20,16 +20,22 @@ function changeBackground(){
 };     
 changeBackgroundBtn.addEventListener('click', changeBackground)
 
-const paintBrush = createBrush ();
-const canvas = document.querySelector('.canvas');
-canvas.appendChild(paintBrush);
+// const paintBrush = createBrush ();
+// const canvas = document.querySelector('.canvas');
+// canvas.appendChild(paintBrush);
 
-function createBrush () {
-    const brush = document.createElement('div');
-    brush.classList.add('brush');
-    return brush;
-}
+// function createBrush () {
+//     const brush = document.createElement('div');
+//     brush.classList.add('brush');
+//     return brush;
+// }
 
-function placeBrush(brush) {
-    const copy = brush.cloneNode(true);
-}
+// function placeBrush(brush) {
+//     const copy = brush.cloneNode(true);
+// };
+// function handleClick() {
+//     placeCircle(mouseCircle);
+// }
+// let paintInterval;
+// function handleStart() {
+//   paintInterval = setInterval(() => placeCircle(paintBrush), 10)
