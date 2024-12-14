@@ -40,3 +40,11 @@ changeBackgroundBtn.addEventListener('click', changeBackground)
 // function handleStart() {
 //   paintInterval = setInterval(() => placeCircle(paintBrush), 10)
 
+document.getElementsByClassName('formType').addEventListener('submit',function(event) {
+    event.preventDefault();
+    const textInput = document.getElementById('text').value;
+    const outputbox = document.getElementsByClassName('textContainer');
+    const newText = document.createElement('p')
+    newText.textContent = textInput;
+    outputbox.appendChild(newText)
+})
