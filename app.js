@@ -24,3 +24,12 @@ const paintBrush = createBrush ();
 const canvas = document.querySelector('.canvas');
 canvas.appendChild(paintBrush);
 
+function createBrush () {
+    const brush = document.createElement('div');
+    brush.classList.add('brush');
+    return brush;
+}
+
+function placeBrush(brush) {
+    const copy = brush.cloneNode(true);
+}
