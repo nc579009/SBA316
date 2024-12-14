@@ -39,3 +39,4 @@ changeBackgroundBtn.addEventListener('click', changeBackground)
 // let paintInterval;
 // function handleStart() {
 //   paintInterval = setInterval(() => placeCircle(paintBrush), 10)
+
