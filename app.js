@@ -38,7 +38,7 @@ function placeBrush(brush) {
     canvas.appendChild(copy)
 }
 function handleClick(event) {
-    placeCircle(mouseCircle);
+    placeBrush(paintBrush);
 }
 let paintInterval;
 function handleStart(event) {
@@ -47,6 +47,10 @@ function handleStart(event) {
 }
 function handleStop(){
     clearInterval(paintInterval)
+}
+function handleMove(e){
+    paintBrush.style.top= e.y - 25 + "px";
+    paintBrush.style.left= e.x - 25 + "px";
 }
 canvas.addEventListener('click', handleClick);
 canvas.addEventListener('mousedown', handleStart);
@@ -63,4 +67,10 @@ document.querySelector('.formType').addEventListener('submit',function(event) {
         newText.textContent = textInput;
         outputbox.appendChild(newText)
     }
+})
+
+//Hidden Name button
+document.getElementById('addName').addEventListener('click',function(){
+    const userInput = prompt ('Enter name for a surprise')
+    
 })

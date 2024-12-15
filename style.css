@@ -65,3 +65,11 @@ body {
 button:hover {
     background-color: #8a1546;
   }
+#addName{
+
+}
+#nameDisplay{
+    border: solid black;
+    margin-top: 20px;
+    font-size: 20px;
+}
