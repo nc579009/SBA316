@@ -6,9 +6,10 @@ body {
     width: auto;
     height: 100vh;
     align-items: center;
+    justify-content: center;
 }
 .activitySpace {
-    border: solid red;
+    /* border: solid red; */
     width: 75%;
     height: 75%;
     background-color: aliceblue;
@@ -19,39 +20,35 @@ body {
     justify-content: center;
 }
 .artSpace {
-    border: solid blue;
+    /* border: solid blue; */
     width: 48%;
     height: 48%;
 }
 .supplySpace{
-    border: solid green;
+    /* border: solid green; */
     height: 20%;
 }
 .canvas{
-    border: solid orange;
+    /* border: solid orange; */
     height: 80%;
 }
 .printSpace {
-    border: solid blue;
+    /* border: solid blue; */
     width: 48%;
     height: 48%;
+    text-wrap: wrap;
 }
 .textFormContainer{
-    border: solid green;
+    /* border: solid green; */
     height: 20%;
 }
 .switchArea{
-    border: solid blue;
+    /* border: solid blue; */
     width: 48%;
     height: 48%;
 }
 .buttonArea {
-    border: solid blue;
-    width: 48%;
-    height: 48%;
-}
-.{
-    border: solid blue;
+    /* border: solid blue; */
     width: 48%;
     height: 48%;
 }
@@ -69,7 +66,18 @@ button:hover {
 
 }
 #nameDisplay{
+    background-color: rgba(33, 58, 123, 0.818);
     border: solid black;
+    margin: auto;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 30px;
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    color: rgb(237, 216, 31);
+    display: none;
+    
+}
+.textContainer{
+    text-wrap: wrap;
 }

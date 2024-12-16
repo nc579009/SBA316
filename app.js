@@ -72,5 +72,8 @@ document.querySelector('.formType').addEventListener('submit',function(event) {
 //Hidden Name button
 document.getElementById('addName').addEventListener('click',function(){
     const userInput = prompt ('Enter name for a surprise')
+    nameDisplay.textContent = `${userInput}'s WORLD`
+    nameDisplay.style.display = "block"
+    nameDisplay.style.display = "center"
     
 })
