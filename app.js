@@ -55,7 +55,7 @@ function handleMove(e){
 canvas.addEventListener('click', handleClick);
 canvas.addEventListener('mousedown', handleStart);
 canvas.addEventListener('mouseup', handleStop);
-
+canvas.addEventListener('mousemove', handleMove);
 
 // Append text area
 document.querySelector('.formType').addEventListener('submit',function(event) {
